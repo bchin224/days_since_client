@@ -1,5 +1,7 @@
 ### Planning Story
-1/7 -
+1/7 - Deployed client side
+    - Set up authentication curl scripts, routes, even listeners and ui
+    - Set up events curl scripts
 
 ### User Stories
 ```md
@@ -20,6 +22,7 @@ As a user, I want a button to delete a date.
 HTML/CSS
 JavaScript
 JQuery
+Ajax
 
 ### Unsolved Problems
 

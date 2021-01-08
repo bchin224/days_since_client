@@ -17,7 +17,7 @@ const createEventFailure = function (error) {
 }
 
 const getAllEventSuccess = function (response) {
-  console.log(response.events)
+  console.log('Here are the events', response.events)
   const eventList = response.events
   $('#message').text('Here are all the events!')
   eventList.forEach(event => {
@@ -31,7 +31,7 @@ const getAllEventFailure = function (error) {
 }
 
 const showEventSuccess = function (response) {
-  console.log('Show the event ' + response.events.id)
+  console.log('Show the event ' + response.event.name + 'on ' + response.event.date)
 }
 
 const showEventFailure = function (error) {

@@ -25,6 +25,7 @@ const getAllEvents = function () {
 }
 
 const showEvent = function (data) {
+  console.log('This is showEvent data:', data)
   return $.ajax({
     url: config.apiUrl + '/events/' + data.event.id,
     method: 'GET',

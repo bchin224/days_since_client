@@ -18,8 +18,9 @@ $(() => {
   $('#change-password').on('submit', authEvents.onChangePassword)
   $('#sign-out').on('click', authEvents.onSignOut)
   // event (date) listeners
-  $('#add-event').on('submit', eventEvents.onEventCreate)
   $('#dashboard').on('click', eventEvents.onEventGetAll)
+  $('#add-event').on('submit', eventEvents.onEventCreate)
+  $('#show-event').on('submit', eventEvents.onEventShow)
   $('#edit-event').on('submit', eventEvents.onEventUpdate)
   $('#delete-event').on('submit', eventEvents.onEventDelete)
   // $('#menu-button').on('click', gameEvents.onMenuClick

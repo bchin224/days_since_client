@@ -7,6 +7,9 @@
     - Created button for editing a single event
     - Created button for deleting an event
 
+1/8 - Created delete a resource functionality
+    - Created show a resource functionality
+
 ### User Stories
 ```md
 As a user, I want a form to sign up.

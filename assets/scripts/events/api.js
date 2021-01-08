@@ -26,7 +26,7 @@ const getAllEvents = function () {
 
 const showEvent = function (data) {
   return $.ajax({
-    url: config.apiUrl + '/events/' + data.id,
+    url: config.apiUrl + '/events/' + data.event.id,
     method: 'GET',
     headers: {
       Authorization: 'Bearer ' + store.user.token
@@ -36,7 +36,7 @@ const showEvent = function (data) {
 
 const deleteEvent = function (data) {
   return $.ajax({
-    url: config.apiUrl + '/events/' + data.id,
+    url: config.apiUrl + '/events/' + data.event.id,
     method: 'DELETE',
     headers: {
       Authorization: 'Bearer ' + store.user.token

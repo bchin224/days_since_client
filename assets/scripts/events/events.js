@@ -7,8 +7,8 @@ const getFormFields = require('./../../../lib/get-form-fields')
 
 const onEventCreate = function (event) {
   event.preventDefault()
-  console.log('This is event target', event.target)
   const data = getFormFields(event.target)
+  console.log('This is data frome event.target', data)
   api.createEvent(data)
     .then(ui.createEventSuccess)
     .catch(ui.createEventFailure)
@@ -31,7 +31,8 @@ const onEventShow = function (event) {
 
 const onEventDelete = function (event) {
   event.preventDefault()
-  api.deleteEvent()
+  const data = getFormFields(event.target)
+  api.deleteEvent(data)
     .then(ui.signOutSuccess)
     .catch(ui.signOutFailure)
 }

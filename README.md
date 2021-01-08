@@ -2,6 +2,10 @@
 1/7 - Deployed client side
     - Set up authentication curl scripts, routes, even listeners and ui
     - Set up events curl scripts
+    - Created fields for creating a new event (resource)
+    - Created button for retrieving index of events (resources)
+    - Created button for editing a single event
+    - Created button for deleting an event
 
 ### User Stories
 ```md
@@ -25,7 +29,8 @@ JQuery
 Ajax
 
 ### Unsolved Problems
-
+Currently all indexes show all date events in database, not the ones
+associated with the owner
 
 ### Wireframes
 ```md

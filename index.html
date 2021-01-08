@@ -44,7 +44,40 @@
               <button type="submit">Change Password</button>
             </form>
             </br>
+            <button type="button" id="dashboard">View Your Dashboard</button>
+            </br>
+            <form id="add-event">
+              <input name="event[name]" type="text" placeholder="Date Name">
+              <input name="event[date]" type="text" placeholder="Date (YY-MM-DD)">
+              <input name="event[info]" type="text" placeholder="Date Info">
+              </br>
+              <button type="submit">Add New Date</button>
+            </form>
+            </br>
+            <form id="edit-event">
+              <input name="event[id]" type="text" placeholder="Date ID">
+              <input name="event[name]" type="text" placeholder="Date Name">
+              <input name="event[date]" type="text" placeholder="Date (YY-MM-DD)">
+              <input name="event[info]" type="text" placeholder="Date Info">
+              </br>
+              <button type="submit">Edit A Date</button>
+            </form>
+          </br>
+            <form id="delete-event">
+              <input name="event[id]" type="text" placeholder="Date ID">
+              </br>
+              <button type="submit">Delete A Date</button>
+            </form>
+            </br>
             <button type="button" id="sign-out">Sign Out</button>
           </div>
+
+          <!-- <div class="dashboard">
+            <h5>Welcome User</h5>
+            <!- add modals for dates -->
+            <!-- </br>
+            <button type="button" id="menu-button">Return To Menu</button>
+
+          </div> -->
     </body>
 </html>

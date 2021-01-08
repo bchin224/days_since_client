@@ -1,6 +1,7 @@
 'use strict'
 
 const authEvents = require('./auth/events.js')
+const eventEvents = require('./events/events.js')
 
 // use require with a reference to bundle the file and use it in this file
 // const example = require('./example')
@@ -10,10 +11,16 @@ const authEvents = require('./auth/events.js')
 
 $(() => {
   // authentication listeners
-  $('.authenticated').hide()
+  // $('.authenticated').hide()
   $('#menu-button').hide()
   $('#sign-up').on('submit', authEvents.onSignUp)
   $('#sign-in').on('submit', authEvents.onSignIn)
   $('#change-password').on('submit', authEvents.onChangePassword)
   $('#sign-out').on('click', authEvents.onSignOut)
+  // event (date) listeners
+  $('#add-event').on('submit', eventEvents.onEventCreate)
+  $('#dashboard').on('click', eventEvents.onEventGetAll)
+  $('#edit-event').on('submit', eventEvents.onEventUpdate)
+  $('#delete-event').on('submit', eventEvents.onEventDelete)
+  // $('#menu-button').on('click', gameEvents.onMenuClick
 })

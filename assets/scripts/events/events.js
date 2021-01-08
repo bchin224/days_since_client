@@ -5,6 +5,14 @@ const ui = require('./ui')
 
 const getFormFields = require('./../../../lib/get-form-fields')
 
+const onAddDateButton = function (event) {
+  event.preventDefault()
+  $('#add-event').show()
+  $('#addDateButton').hide()
+  $('#show-event').hide()
+  $('#edit-event').hide()
+}
+
 const onEventCreate = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
@@ -16,9 +24,21 @@ const onEventCreate = function (event) {
 
 const onEventGetAll = function (event) {
   event.preventDefault()
+  $('#add-event').hide()
+  $('#show-event').hide()
+  $('#edit-event').hide()
   api.getAllEvents()
     .then(ui.getAllEventSuccess)
     .catch(ui.getAllEventFailure)
+}
+
+const onShowDateButton = function (event) {
+  event.preventDefault()
+  $('#add-event').hide()
+  $('#show-event').show()
+  $('#edit-event').hide()
+  $('#showDateButton').hide()
+  $('#delete-event').hide()
 }
 
 const onEventShow = function (event) {
@@ -27,6 +47,32 @@ const onEventShow = function (event) {
   api.showEvent(data)
     .then(ui.showEventSuccess)
     .catch(ui.showEventFailure)
+}
+
+const onEditDateButton = function (event) {
+  event.preventDefault()
+  $('#add-event').hide()
+  $('#show-event').hide()
+  $('#edit-event').show()
+  $('#editDateButton').hide()
+  $('#delete-event').hide()
+}
+
+const onEventUpdate = function (event) {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  api.editEvent(data)
+    .then(ui.signOutSuccess)
+    .catch(ui.signOutFailure)
+}
+
+const onDeleteDateButton = function (event) {
+  event.preventDefault()
+  $('#add-event').hide()
+  $('#show-event').hide()
+  $('#edit-event').hide()
+  $('#delete-event').show()
+  $('#deleteDateButton').hide()
 }
 
 const onEventDelete = function (event) {
@@ -48,8 +94,13 @@ const onEventDelete = function (event) {
 // }
 
 module.exports = {
+  onAddDateButton,
   onEventCreate,
   onEventGetAll,
+  onShowDateButton,
   onEventShow,
+  onEditDateButton,
+  onEventUpdate,
+  onDeleteDateButton,
   onEventDelete
 }

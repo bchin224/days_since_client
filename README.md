@@ -9,6 +9,8 @@
 
 1/8 - Created delete a resource functionality
     - Created show a resource functionality
+    - Updated a show resource functionality
+    - Made other forms hidden when a different button is clicked
 
 ### User Stories
 ```md
@@ -32,8 +34,7 @@ JQuery
 Ajax
 
 ### Unsolved Problems
-Currently all indexes show all date events in database, not the ones
-associated with the owner
+
 
 ### Wireframes
 ```md

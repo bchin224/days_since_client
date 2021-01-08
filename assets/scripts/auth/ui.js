@@ -16,6 +16,10 @@ const signInSuccess = function (response) {
   $('#message-display').text('Signed in successfully!')
   $('.unauthenticated').hide()
   $('.authenticated').show()
+  $('#add-event').hide()
+  $('#show-event').hide()
+  $('#edit-event').hide()
+  $('#delete-event').hide()
   $('form').trigger('reset')
 }
 const signInFailure = function (error) {

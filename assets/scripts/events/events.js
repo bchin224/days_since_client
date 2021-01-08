@@ -7,16 +7,26 @@ const getFormFields = require('./../../../lib/get-form-fields')
 
 const onAddDateButton = function (event) {
   event.preventDefault()
+  $('#welcomeMSG').text('')
+  $('#dashboardButton').hide()
+  $('.dashboard').hide()
+  $('#change-password').hide()
+  $('#changePassButton').hide()
   $('#add-event').show()
   $('#addDateButton').hide()
   $('#show-event').hide()
+  $('#showDateButton').hide()
   $('#edit-event').hide()
+  $('#editDateButton').hide()
+  $('#deleteDateButton').hide()
+  $('#delete-event').hide()
+  $('#sign-out').hide()
+  $('#menu-button').show()
 }
 
 const onEventCreate = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
-  console.log('This is data frome event.target', data)
   api.createEvent(data)
     .then(ui.createEventSuccess)
     .catch(ui.createEventFailure)
@@ -24,9 +34,21 @@ const onEventCreate = function (event) {
 
 const onEventGetAll = function (event) {
   event.preventDefault()
+  $('#welcomeMsg').text('')
+  $('#change-password').hide()
+  $('#changePassButton').hide()
   $('#add-event').hide()
+  $('#addDateButton').hide()
   $('#show-event').hide()
+  $('#showDateButton').hide()
   $('#edit-event').hide()
+  $('#editDateButton').hide()
+  $('#delete-event').hide()
+  $('#deleteDateButton').hide()
+  $('#sign-out').hide()
+  $('#dashboardButton').hide()
+  $('.dashboard').show()
+  $('#menu-button').show()
   api.getAllEvents()
     .then(ui.getAllEventSuccess)
     .catch(ui.getAllEventFailure)
@@ -34,11 +56,21 @@ const onEventGetAll = function (event) {
 
 const onShowDateButton = function (event) {
   event.preventDefault()
+  $('#welcomeMsg').text('')
+  $('#dashboardButton').hide()
+  $('.dashboard').hide()
+  $('#change-password').hide()
+  $('#changePassButton').hide()
   $('#add-event').hide()
+  $('#addDateButton').hide()
   $('#show-event').show()
-  $('#edit-event').hide()
   $('#showDateButton').hide()
+  $('#edit-event').hide()
+  $('#editDateButton').hide()
   $('#delete-event').hide()
+  $('#deleteDateButton').hide()
+  $('#sign-out').hide()
+  $('#menu-button').show()
 }
 
 const onEventShow = function (event) {
@@ -51,11 +83,21 @@ const onEventShow = function (event) {
 
 const onEditDateButton = function (event) {
   event.preventDefault()
+  $('#welcomeMsg').text('')
+  $('#dashboardButton').hide()
+  $('.dashboard').hide()
+  $('#change-password').hide()
+  $('#changePassButton').hide()
   $('#add-event').hide()
+  $('#addDateButton').hide()
   $('#show-event').hide()
+  $('#showDateButton').hide()
   $('#edit-event').show()
   $('#editDateButton').hide()
   $('#delete-event').hide()
+  $('#deleteDateButton').hide()
+  $('#sign-out').hide()
+  $('#menu-button').show()
 }
 
 const onEventUpdate = function (event) {
@@ -68,11 +110,21 @@ const onEventUpdate = function (event) {
 
 const onDeleteDateButton = function (event) {
   event.preventDefault()
+  $('#welcomeMsg').text('')
+  $('#dashboardButton').hide()
+  $('.dashboard').hide()
+  $('#change-password').hide()
+  $('#changePassButton').hide()
   $('#add-event').hide()
+  $('#addDateButton').hide()
   $('#show-event').hide()
+  $('#showDateButton').hide()
   $('#edit-event').hide()
+  $('#editDateButton').hide()
   $('#delete-event').show()
   $('#deleteDateButton').hide()
+  $('#sign-out').hide()
+  $('#menu-button').show()
 }
 
 const onEventDelete = function (event) {
@@ -83,15 +135,26 @@ const onEventDelete = function (event) {
     .catch(ui.signOutFailure)
 }
 
-// const onMenuClick = function (event) {
-//   event.preventDefault()
-//   $('.gameplay').hide()
-//   $('.authenticated').show()
-//   gameOver = false
-//   $('.box').toggle('click')
-//   $('#menu-button').hide()
-//   $('#message-display').text('')
-// }
+const onMenuClick = function (event) {
+  event.preventDefault()
+  $('#welcomeMsg').text('')
+  $('#change-password').hide()
+  $('#add-event').hide()
+  $('#show-event').hide()
+  $('#edit-event').hide()
+  $('#delete-event').hide()
+  $('#change-password').hide()
+  $('#menu-button').hide()
+  $('#dashboardButton').show()
+  $('.dashboard').hide()
+  $('#message-display').text('')
+  $('#changePassButton').show()
+  $('#addDateButton').show()
+  $('#showDateButton').show()
+  $('#editDateButton').show()
+  $('#deleteDateButton').show()
+  $('#sign-out').show()
+}
 
 module.exports = {
   onAddDateButton,
@@ -102,5 +165,6 @@ module.exports = {
   onEditDateButton,
   onEventUpdate,
   onDeleteDateButton,
-  onEventDelete
+  onEventDelete,
+  onMenuClick
 }

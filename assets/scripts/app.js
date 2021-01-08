@@ -11,18 +11,22 @@ const eventEvents = require('./events/events.js')
 
 $(() => {
   // authentication listeners
+  $('#message').text('')
   $('.authenticated').hide()
+  $('#change-password').hide()
   $('#add-event').hide()
   $('#show-event').hide()
   $('#edit-event').hide()
   $('#menu-button').hide()
   $('#delete-event').hide()
+  $('.dashboard').hide()
   $('#sign-up').on('submit', authEvents.onSignUp)
   $('#sign-in').on('submit', authEvents.onSignIn)
+  $('#changePassButton').on('click', authEvents.onChangePassButton)
   $('#change-password').on('submit', authEvents.onChangePassword)
   $('#sign-out').on('click', authEvents.onSignOut)
   // event (date) listeners
-  $('#dashboard').on('click', eventEvents.onEventGetAll)
+  $('#dashboardButton').on('click', eventEvents.onEventGetAll)
   $('#addDateButton').on('click', eventEvents.onAddDateButton)
   $('#add-event').on('submit', eventEvents.onEventCreate)
   $('#showDateButton').on('click', eventEvents.onShowDateButton)
@@ -31,5 +35,5 @@ $(() => {
   $('#edit-event').on('submit', eventEvents.onEventUpdate)
   $('#deleteDateButton').on('click', eventEvents.onDeleteDateButton)
   $('#delete-event').on('submit', eventEvents.onEventDelete)
-  // $('#menu-button').on('click', gameEvents.onMenuClick
+  $('#menu-button').on('click', eventEvents.onMenuClick)
 })

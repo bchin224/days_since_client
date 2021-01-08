@@ -22,6 +22,24 @@ const onSignIn = function (event) {
     .catch(ui.signInFailure)
 }
 
+const onChangePassButton = function (event) {
+  event.preventDefault()
+  $('#change-password').show()
+  $('#changePassButton').hide()
+  $('#add-event').hide()
+  $('#addDateButton').hide()
+  $('#dashboardButton').hide()
+  $('#show-event').hide()
+  $('#showDateButton').hide()
+  $('#edit-event').hide()
+  $('#editDateButton').hide()
+  $('#delete-event').hide()
+  $('#deleteDateButton').hide()
+  $('.dashboard').hide()
+  $('#menu-button').show()
+  $('#sign-out').hide()
+}
+
 const onChangePassword = function (event) {
   event.preventDefault()
   const form = event.target
@@ -41,6 +59,7 @@ const onSignOut = function (event) {
 module.exports = {
   onSignUp,
   onSignIn,
+  onChangePassButton,
   onChangePassword,
   onSignOut
 }

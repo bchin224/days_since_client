@@ -36,15 +36,17 @@
           </div>
 
           <div class="authenticated">
-            <h5>Change Password</h5>
+            <h5 id="welcomeMsg">Welcome!</h5>
             <form id="change-password">
               <input name="passwords[old]" type="password" placeholder="Old Password">
               <input name="passwords[new]" type="password" placeholder="New Password">
               </br>
               <button type="submit">Change Password</button>
             </form>
+            <button type="button" id="changePassButton">Change Password</button>
+
             </br>
-            <button type="button" id="dashboard">View Your Dashboard</button>
+            <button type="button" id="dashboardButton">View Your Dashboard</button>
             </br>
             <form id="add-event">
               <input name="event[name]" type="text" placeholder="Date Name">
@@ -78,17 +80,16 @@
               <button type="submit">Delete Date</button>
             </form>
             <button type="button" id="deleteDateButton">Delete A Date</button>
-
             </br>
             <button type="button" id="sign-out">Sign Out</button>
           </div>
 
-          <!-- <div class="dashboard">
+          <div class="dashboard">
             <h5>Welcome User</h5>
-            <!- add modals for dates -->
-            <!-- </br>
-            <button type="button" id="menu-button">Return To Menu</button>
+            <!-- <!- add modals for dates -->
+            </br>
+          </div>
+          <button type="button" id="menu-button">Return To Menu</button>
 
-          </div> -->
     </body>
 </html>

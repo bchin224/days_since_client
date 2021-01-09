@@ -15,6 +15,7 @@
 1/9 - Replaced dashboard with modal
     - Added boostrap grids for dates within modal
     - Adjusted background colors and added margins
+    - Added modal for show individual event
 
 ### User Stories
 ```md

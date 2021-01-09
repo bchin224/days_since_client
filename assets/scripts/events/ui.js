@@ -3,7 +3,7 @@
 const createEventSuccess = function (response) {
   console.log(response.event)
 
-  $('#message').text('Event Created!')
+  $('#message-display').text('Event Created!')
 
   const eventHtml = `
   <h3>${response.event.title}</h3>
@@ -13,29 +13,32 @@ const createEventSuccess = function (response) {
 }
 
 const createEventFailure = function (error) {
-  $('#message').text('Event create failed: ' + error.responseJSON.message)
+  $('#message-display').text('Event create failed: ' + error.responseJSON.message)
 }
 
 const getAllEventSuccess = function (response) {
   console.log('Here are the events', response.events)
   const eventList = response.events
-  $('#message').text('Here are all the events!')
+  $('#message-display').text('Here are all the events!')
   eventList.forEach(event => {
-    $('#message').after(`<b>ID:</b> ${event._id}</br></br>`)
-    $('#message').after(`<b>Title:</b> ${event.title}</br>`)
+    $('#date-info').text(`${event.name} | ${event.date}`)
+    // $('#date-info').after(`Date: ${event.date}`)
+    $('#days-passed').text('Days since event calculation')
   })
 }
 
 const getAllEventFailure = function (error) {
-  $('#message').text('Failed to get all events' + error.responseJSON.message)
+  $('#message-display').text('Failed to get all events' + error.responseJSON.message)
 }
 
 const showEventSuccess = function (response) {
   console.log('Show the event ' + response.event.name + 'on ' + response.event.date)
+  $('#show-date-info').text(`${response.event.name} | ${response.event.date}`)
+  $('#show-days-passed').text('Days since event calculation')
 }
 
 const showEventFailure = function (error) {
-  $('#message').text('Failed to show a event' + error.responseJSON.message)
+  $('#message-display').text('Failed to show a event' + error.responseJSON.message)
 }
 
 module.exports = {

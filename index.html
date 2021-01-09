@@ -65,8 +65,8 @@
                     <ol>
                       <div class="container-fluid">
                         <div class="row">
-                          <div class="col-sm-8 col-12" id="date-info">Name + Date</div>
-                          <div class="col-sm-3 col-12" id="days-passed">Days since</div>
+                          <div class="col-sm-8 col-12" id="date-info"></div>
+                          <div class="col-sm-3 col-12" id="days-passed"></div>
                         </div>
                         <div class="row">
                           <div class="col-sm-8 col-12" id="date-info">Name2 + Date</div>
@@ -96,8 +96,34 @@
             <form id="show-event">
               <input name="event[id]" type="text" placeholder="Date ID">
               </br>
-              <button type="submit">Find It</button>
+              <!-- Button trigger modal -->
+              <button type="submit" id="showEventDashButton" data-toggle="modal" data-target="#staticBackdropShow">
+                Find It</button>
             </form>
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdropShow" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Your Event</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                      <div class="container-fluid">
+                        <div class="row">
+                          <div class="col-sm-8 col-12" id="show-date-info"></div>
+                          <div class="col-sm-3 col-12" id="show-days-passed"></div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
             <button type="button" id="showDateButton">Find A Date</button>
             </br>
             <form id="edit-event">

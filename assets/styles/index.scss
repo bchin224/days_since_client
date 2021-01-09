@@ -2,9 +2,22 @@
 
 body {
   text-align: center;
-  background: #999999;
+  background: #CDF0FD;
+}
+
+input {
+  margin: 2px;
 }
 
 button {
   margin: 10px;
+}
+
+.row {
+  background: #88888888;
+  margin: 5px 0px;
+}
+
+#date-info {
+  background: #9999ff;
 }

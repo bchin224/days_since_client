@@ -12,6 +12,10 @@
     - Updated a show resource functionality
     - Made other forms hidden when a different button is clicked
 
+1/9 - Replaced dashboard with modal
+    - Added boostrap grids for dates within modal
+    - Adjusted background colors and added margins
+
 ### User Stories
 ```md
 As a user, I want a form to sign up.
@@ -34,7 +38,7 @@ JQuery
 Ajax
 
 ### Unsolved Problems
-
+- allow user to customize color of each date
 
 ### Wireframes
 ```md

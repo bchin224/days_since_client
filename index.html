@@ -46,7 +46,43 @@
             <button type="button" id="changePassButton">Change Password</button>
 
             </br>
-            <button type="button" id="dashboardButton">View Your Dashboard</button>
+            <!-- Button trigger modal -->
+            <button type="button" id="dashboardButton" data-toggle="modal" data-target="#staticBackdrop">
+              View Your Dashboard
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Your Events Dashboard</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <ol>
+                      <div class="container-fluid">
+                        <div class="row">
+                          <div class="col-sm-8 col-12" id="date-info">Name + Date</div>
+                          <div class="col-sm-3 col-12" id="days-passed">Days since</div>
+                        </div>
+                        <div class="row">
+                          <div class="col-sm-8 col-12" id="date-info">Name2 + Date</div>
+                          <div class="col-sm-3 col-12" id="days-passed">Days since</div>                        </div>
+                        <div class="row">
+                          <div class="col-sm-8 col-12" id="date-info">Name3 + Date</div>
+                          <div class="col-sm-3 col-12" id="days-passed">Days since</div>                        </div>
+                      </div>
+                    </ol>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
             </br>
             <form id="add-event">
               <input name="event[name]" type="text" placeholder="Date Name">

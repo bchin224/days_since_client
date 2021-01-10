@@ -13,7 +13,9 @@ const signUpFailure = function (error) {
 
 const signInSuccess = function (response) {
   store.user = response.user
-  $('#message-display').text('Signed in successfully!')
+  // get today's date
+  const d = new Date()
+  $('#message-display').text(`Welcome ${response.user.email}! Today is ${d.toDateString()}`)
   $('.unauthenticated').hide()
   $('.authenticated').show()
   $('#add-event').hide()

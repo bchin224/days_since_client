@@ -16,6 +16,7 @@
     - Added boostrap grids for dates within modal
     - Adjusted background colors and added margins
     - Added modal for show individual event
+    - Added virtual for days passed calculation
 
 ### User Stories
 ```md
@@ -40,6 +41,8 @@ Ajax
 
 ### Unsolved Problems
 - allow user to customize color of each date
+- Calculating dates is not 100% accurate
+- Can't get virtual to pull data from resource and display it in the modal
 
 ### Wireframes
 ```md

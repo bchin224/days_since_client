@@ -23,7 +23,10 @@ const getAllEventSuccess = function (response) {
   eventList.forEach(event => {
     $('#date-info').text(`${event.name} | ${event.date}`)
     // $('#date-info').after(`Date: ${event.date}`)
-    $('#days-passed').text('Days since event calculation')
+    // $('#days-passed').text(`Days since ${jQuery.now()}`)
+    console.log('This is daysSince:', event.daysSince)
+    $('#days-passed').text(`Days since ${response.daysSince}`)
+
   })
 }
 

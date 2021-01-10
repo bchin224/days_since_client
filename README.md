@@ -18,6 +18,9 @@
     - Added modal for show individual event
     - Added virtual for days passed calculation
 
+1/10 - Importing modal data
+     - Adjusted index so all resources are displayed
+
 ### User Stories
 ```md
 As a user, I want a form to sign up.
@@ -42,7 +45,7 @@ Ajax
 ### Unsolved Problems
 - allow user to customize color of each date
 - Calculating dates is not 100% accurate
-- Can't get virtual to pull data from resource and display it in the modal
+- Days since calulation isn't working
 
 ### Wireframes
 ```md

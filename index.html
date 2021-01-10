@@ -36,7 +36,6 @@
           </div>
 
           <div class="authenticated">
-            <h5 id="welcomeMsg">Welcome!</h5>
             <form id="change-password">
               <input name="passwords[old]" type="password" placeholder="Old Password">
               <input name="passwords[new]" type="password" placeholder="New Password">
@@ -63,17 +62,11 @@
                   </div>
                   <div class="modal-body">
                     <ol>
-                      <div class="container-fluid">
-                        <div class="row">
+                      <div class="container-fluid" id="dashEvents">
+                        <!-- <div class="row">
                           <div class="col-sm-8 col-12" id="date-info"></div>
                           <div class="col-sm-3 col-12" id="days-passed"></div>
-                        </div>
-                        <div class="row">
-                          <div class="col-sm-8 col-12" id="date-info">Name2 + Date</div>
-                          <div class="col-sm-3 col-12" id="days-passed">Days since</div>                        </div>
-                        <div class="row">
-                          <div class="col-sm-8 col-12" id="date-info">Name3 + Date</div>
-                          <div class="col-sm-3 col-12" id="days-passed">Days since</div>                        </div>
+                        </div> -->
                       </div>
                     </ol>
                   </div>
@@ -86,7 +79,7 @@
             </br>
             <form id="add-event">
               <input name="event[name]" type="text" placeholder="Date Name">
-              <input name="event[date]" type="text" placeholder="Date (YY-MM-DD)">
+              <input name="event[date]" type="text" placeholder="Date (Month DD YYYY)">
               <input name="event[info]" type="text" placeholder="Date Info">
               </br>
               <button type="submit">Create Date</button>
@@ -129,7 +122,7 @@
             <form id="edit-event">
               <input name="event[id]" type="text" placeholder="Date ID">
               <input name="event[name]" type="text" placeholder="Date Name">
-              <input name="event[date]" type="text" placeholder="Date (YY-MM-DD)">
+              <input name="event[date]" type="text" placeholder="Date (Month DD YYYY)">
               <input name="event[info]" type="text" placeholder="Date Info">
               </br>
               <button type="submit">Update Date</button>

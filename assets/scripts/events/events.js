@@ -104,8 +104,8 @@ const onEventUpdate = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
   api.editEvent(data)
-    .then(ui.signOutSuccess)
-    .catch(ui.signOutFailure)
+    .then(ui.editEventSuccess)
+    .catch(ui.editEventFailure)
 }
 
 const onDeleteDateButton = function (event) {
@@ -131,8 +131,8 @@ const onEventDelete = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
   api.deleteEvent(data)
-    .then(ui.signOutSuccess)
-    .catch(ui.signOutFailure)
+    .then(ui.deleteEventSuccess)
+    .catch(ui.deleteEventFailure)
 }
 
 const onMenuClick = function (event) {

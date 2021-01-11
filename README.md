@@ -1,3 +1,9 @@
+### Days Since
+The Days Since application allows a client to create a user and then start creating dates that they might want to know how long it has been since they occured. Perhaps it's an anniversary or the loss of a loved one. Either way, your information is stored securely on a MongoDB server listed below.
+API Repository: https://github.com/bchin224/days_since_api
+API Live Server: https://nameless-crag-47108.herokuapp.com/
+Live Application: https://bchin224.github.io/days_since_client/
+
 ### Planning Story
 1/7 - Deployed client side
     - Set up authentication curl scripts, routes, even listeners and ui

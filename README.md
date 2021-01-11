@@ -22,6 +22,10 @@
      - Adjusted index so all resources are displayed
      - Virtual calculating elapsed time now works (within 10 days of accuracy)
 
+1/11 - Changed to green accent and background colors
+     - Adjusted failure messages to be more specific to function
+     - Adjusted show even modal information
+
 ### User Stories
 ```md
 As a user, I want a form to sign up.

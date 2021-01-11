@@ -10,7 +10,7 @@ const eventEvents = require('./events/events.js')
 // require('./example')
 
 $(() => {
-  // authentication listeners
+  // hide all non-button id's and classes
   $('#message').text('')
   $('.authenticated').hide()
   $('#change-password').hide()
@@ -20,6 +20,7 @@ $(() => {
   $('#menu-button').hide()
   $('#delete-event').hide()
   $('.dashboard').hide()
+  // authentication listeners
   $('#sign-up').on('submit', authEvents.onSignUp)
   $('#sign-in').on('submit', authEvents.onSignIn)
   $('#changePassButton').on('click', authEvents.onChangePassButton)

@@ -1,16 +1,29 @@
 @import '~bootstrap/scss/bootstrap';
 
+$bg-color: #64ed58;
+
 body {
   text-align: center;
   width: 100%;
   height: 100vh;
-  background: linear-gradient(-90deg, #4996f5, #33dcff, #4996f5);
+  background: linear-gradient(-45deg, #1ce08e, #64ed58, #8df084);
   background-size: cover;
-  position: relative;
+  // position: relative;
 }
 
-h1 {
-  margin-top: 15px;
+.unauthenticated, .authenticated {
+  border: 1px solid black;
+  background-color: #fbfbfb;
+  margin-left: 25%;
+  margin-right: 50%;
+  width: 50%;
+  padding: 10px;
+  // filter: drop-shadow(0px 8px 6px #000000);
+}
+
+header {
+  font-size: 250%;
+  margin-top: 15px 30% 0 30%;
 }
 
 input {
@@ -23,9 +36,14 @@ button {
 
 .row {
   background: #88888888;
-  margin: 5px 0px;
+  border: 2px solid black;
+  margin: 10px 0px;
+}
+
+.modal-header {
+  background: $bg-color;
 }
 
 #date-info, #show-date-info {
-  background: #9999ff;
+  background: $bg-color;
 }

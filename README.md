@@ -20,6 +20,7 @@
 
 1/10 - Importing modal data
      - Adjusted index so all resources are displayed
+     - Virtual calculating elapsed time now works (within 10 days of accuracy)
 
 ### User Stories
 ```md
@@ -45,7 +46,6 @@ Ajax
 ### Unsolved Problems
 - allow user to customize color of each date
 - Calculating dates is not 100% accurate
-- Days since calulation isn't working
 
 ### Wireframes
 ```md

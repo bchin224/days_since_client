@@ -24,6 +24,7 @@ const onSignIn = function (event) {
 
 const onChangePassButton = function (event) {
   event.preventDefault()
+  $('#message-display').text('')
   $('#change-password').show()
   $('#changePassButton').hide()
   $('#add-event').hide()

@@ -12,7 +12,7 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Days Since App</h1>
+      <h1>Days Since</h1>
         <p id="message-display" class="turn"></p>
           <div class="unauthenticated">
             <h5>Sign Up</h5>
@@ -63,10 +63,7 @@
                   <div class="modal-body">
                     <ol>
                       <div class="container-fluid" id="dashEvents">
-                        <!-- <div class="row">
-                          <div class="col-sm-8 col-12" id="date-info"></div>
-                          <div class="col-sm-3 col-12" id="days-passed"></div>
-                        </div> -->
+                        <!-- Insert rows from getAllEventSuccess -->
                       </div>
                     </ol>
                   </div>
@@ -106,6 +103,7 @@
                   <div class="modal-body">
                       <div class="container-fluid">
                         <div class="row">
+                          <!-- Populate with data from showEventSuccess -->
                           <div class="col-sm-8 col-12" id="show-date-info"></div>
                           <div class="col-sm-3 col-12" id="show-days-passed"></div>
                         </div>

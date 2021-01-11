@@ -2,24 +2,25 @@
 
 const createEventSuccess = function (response) {
   $('#message-display').text('Event Created!')
+  $('form').trigger('reset')
 }
 
 const createEventFailure = function (error) {
+  $('form').trigger('reset')
   $('#message-display').text('Failed to create event: ' + error.responseJSON.message)
 }
 
 const getAllEventSuccess = function (response) {
-  // console.log('Here are the events', response.events)
   let dashTest = ''
   const eventList = response.events
-  console.log('Testing Virtual:', eventList)
   $('#message-display').html('')
   eventList.forEach(event => {
     const eventHtml = (`
     <div class="row">
       <div class="col-sm-8 col-12" id="date-info">${event.name}  |  ${event.date}
-        </br>ID:${event._id}</div>
-      <div class="col-sm-4 col-12" id="days-passed"># days:</br> ${event.daysSince}</div>
+        </br><b>ID:</b>${event._id}
+        </br><b>Info:</b> ${event.info}</div>
+      <div class="col-sm-4 col-12" id="days-passed"># days:</br> ${Math.floor(event.daysSince)}</div>
     </div>
     `)
     // add each element to a larger string
@@ -30,15 +31,14 @@ const getAllEventSuccess = function (response) {
 }
 
 const getAllEventFailure = function (error) {
-  $('#message-display').text('')
   $('#message-display').text('Failed to get all events: ' + error.responseJSON.message)
 }
 
 const showEventSuccess = function (response) {
   $('#message-display').text('')
   $('.modal-title').text(response.event.name)
-  $('#show-date-info').text(`Date: ${response.event.date}`)
-  $('#show-days-passed').text(`Days since: ${response.event.daysSince}`)
+  $('#show-date-info').text(`Date: ${response.event.date} Info: ${response.event.info}`)
+  $('#show-days-passed').text(`Days since: ${Math.floor(response.event.daysSince)}`)
   $('form').trigger('reset')
 }
 
@@ -54,6 +54,7 @@ const editEventSuccess = function (response) {
 }
 
 const editEventFailure = function (error) {
+  $('form').trigger('reset')
   $('#message-display').show()
   $('#message-display').text('Failed to edit that event. It was ' + error.responseJSON.message)
 }

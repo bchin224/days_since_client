@@ -25,9 +25,15 @@
 1/11 - Changed to green accent and background colors
      - Adjusted failure messages to be more specific to function
      - Adjusted show even modal information
+     - Replaced header with logo
+     - Added mouse hover color change
+     - Added snowdrop animation to background, but removed when it interferred
+       with mouse clicks on forms
+     - Updated wireframe
+     - Modals now display event info input
+     - Added Math.floor to round down elapsed days calculation
 
 ### User Stories
-```md
 As a user, I want a form to sign up.
 As a user, I want a form to sign in.
 As a user, I want a button to sign out.
@@ -38,8 +44,8 @@ As a user, I want to have a dashboard of my inputted dates with data
 As a user, I want to have viewing options for my dashboard
 As a user, I want the app to calculate the number of days since date input
 As a user, I want to viewing options for my dates
+As a user, I want a button to find an event.
 As a user, I want a button to delete a date.
-```
 
 ### Technologies Used
 HTML/CSS
@@ -52,7 +58,4 @@ Ajax
 - Calculating dates is not 100% accurate
 
 ### Wireframes
-```md
-![Days Since App wireframe]
-https://imgur.com/ct850s9
-```
+![Days Since App wireframe](https://imgur.com/LPVI3II)

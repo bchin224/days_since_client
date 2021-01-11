@@ -32,6 +32,7 @@
      - Updated wireframe
      - Modals now display event info input
      - Added Math.floor to round down elapsed days calculation
+     - Added form resets to all form success and failure in UI
 
 ### User Stories
 As a user, I want a form to sign up.

@@ -45,6 +45,7 @@ const showEventSuccess = function (response) {
 const showEventFailure = function (error) {
   $('.modal-title').text('Failed to find event')
   $('#message-display').text('')
+  $('form').trigger('reset')
   $('#show-date-info').text('Please try a different event ID that is not ' + error.responseJSON.message)
 }
 
@@ -65,6 +66,7 @@ const deleteEventSuccess = function (response) {
 }
 
 const deleteEventFailure = function (error) {
+  $('form').trigger('reset')
   $('#message-display').text('Failed to delete that event. It was ' + error.responseJSON.message)
 }
 

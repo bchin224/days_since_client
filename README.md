@@ -59,4 +59,5 @@ Ajax
 - Calculating dates is not 100% accurate
 
 ### Wireframes
-![Days Since App wireframe](https://imgur.com/LPVI3II)
+![Days Since App wireframe]
+https://imgur.com/LPVI3II

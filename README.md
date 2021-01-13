@@ -71,4 +71,4 @@ The Days Since application allows a client to create a user and then start creat
 - Allow user to customize color of each date
 
 ### Wireframes
-![Days Since App wireframe](https://i.imgur.com/LPVI3II.jpg) "Days Since Wireframe")
+![Days Since App wireframe](https://i.imgur.com/LPVI3II.jpg "Days Since Wireframe")

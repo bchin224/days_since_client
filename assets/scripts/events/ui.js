@@ -14,6 +14,7 @@ const getAllEventSuccess = function (response) {
   let dashTest = ''
   const eventList = response.events
   $('#message-display').html('')
+  $('.modal-title').text('Your Events Dashboard')
   eventList.forEach(event => {
     const eventHtml = (`
     <div class="row">

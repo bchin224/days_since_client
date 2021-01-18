@@ -3,7 +3,9 @@ The Days Since application allows a client to create a user and then start creat
 
 ### Relevant Links
 [API Repository](https://github.com/bchin224/days_since_api)
+|
 [API Live Server](https://nameless-crag-47108.herokuapp.com/)
+|
 [Live Application](https://bchin224.github.io/days_since_client/)
 
 ### Planning Story
@@ -46,6 +48,10 @@ The Days Since application allows a client to create a user and then start creat
 - Modals now display event info input
 - Added Math.floor to round down elapsed days calculation
 - Added form resets to all form success and failure in UI
+
+1/18
+- Fixed bug: modals holding on to titles from other events
+- Added a brief message on home screen explaining the app
 
 ### User Stories
 - As a user, I want a form to sign up.

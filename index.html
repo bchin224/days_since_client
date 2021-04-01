@@ -6,10 +6,12 @@
 
       <!-- Do not add `link` tags-->
       <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+      <link href="dist/the-datepicker.css" rel="stylesheet" />
 
       <!-- Do not add `script` tags-->
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="dist/the-datepicker.js"></script>
     </head>
     <body>
       <header><img src="./public/DaysSince_Header.png" alt="Days Since Header" id="logo"></header>
@@ -29,6 +31,7 @@
               <button type="submit">Sign Up</button>
             </form></br>
             <h5>Sign In</h5>
+            <p id="guest">If you'd like to test out the app, you can sign in with the email "guest@guest.com" and password "guest"!</p>
             <form id="sign-in">
               <input name="credentials[email]" type="text" placeholder="email@example.com">
               </br>
@@ -77,10 +80,14 @@
               </div>
             </div>
             </br>
+            <!-- Add a new date -->
             <form id="add-event">
               <input name="event[name]" type="text" placeholder="Date Name">
-              <input name="event[date]" type="text" placeholder="Date (Month DD YYYY)">
               <input name="event[info]" type="text" placeholder="Date Info">
+              </br>
+              <div class="container">
+                <input type="text" id="calendar">
+              </div>
               </br>
               <button type="submit">Create Date</button>
             </form>
@@ -140,5 +147,9 @@
             <button type="button" id="sign-out">Sign Out</button>
             <button type="button" id="menu-button">Return To Menu</button>
           </div>
+          <!-- Footer -->
+          <footer>
+            <p> Made by Brian Chin. Visit my <a href="https://github.com/bchin224">github here</a></p>
+          </footer>
     </body>
 </html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Days Since</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+      <link href="dist/the-datepicker.css" rel="stylesheet" />
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="dist/the-datepicker.js"></script>
+    </head>
+    <body>
+      <header><img src="./public/DaysSince_Header.png" alt="Days Since Header" id="logo"></header>
+        <p id="message-display" class="turn"></p>
+          <div class="unauthenticated">
+            <p id="intro">With Days Since, you can keep track of how many days it's been since
+              any special day that you might want to remember! Log in and start tracking today!
+            </p>
+            <h5>Sign Up</h5>
+            <form id="sign-up">
+              <input name="credentials[email]" type="text" placeholder="email@example.com">
+              </br>
+              <input name="credentials[password]" type="password" placeholder="password">
+              </br>
+              <input name="credentials[password_confirmation]" type="password" placeholder="confirm password">
+              </br>
+              <button type="submit">Sign Up</button>
+            </form></br>
+            <h5>Sign In</h5>
+            <p id="guest">If you'd like to test out the app, you can sign in with the email "guest@guest.com" and password "guest"!</p>
+            <form id="sign-in">
+              <input name="credentials[email]" type="text" placeholder="email@example.com">
+              </br>
+              <input name="credentials[password]" type="password" placeholder="password">
+              </br>
+              <button type="submit">Sign In</button>
+            </form>
+          </div>
+
+          <div class="authenticated">
+            <form id="change-password">
+              <input name="passwords[old]" type="password" placeholder="Old Password">
+              <input name="passwords[new]" type="password" placeholder="New Password">
+              </br>
+              <button type="submit">Change Password</button>
+            </form>
+            <button type="button" id="changePassButton">Change Password</button>
+
+            </br>
+            <!-- Button trigger modal -->
+            <button type="button" id="dashboardButton" data-toggle="modal" data-target="#staticBackdrop">
+              View Your Dashboard
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Your Events Dashboard</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <ol>
+                      <div class="container-fluid" id="dashEvents">
+                        <!-- Insert rows from getAllEventSuccess -->
+                      </div>
+                    </ol>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </br>
+            <!-- Add a new date -->
+            <form id="add-event">
+              <input name="event[name]" type="text" placeholder="Date Name">
+              <input name="event[info]" type="text" placeholder="Date Info">
+              </br>
+              <div class="container">
+                <input type="text" id="calendar">
+              </div>
+              </br>
+              <button type="submit">Create Date</button>
+            </form>
+            <button type="button" id="addDateButton">Add A New Date</button>
+            </br>
+            <form id="show-event">
+              <input name="event[id]" type="text" placeholder="Date ID">
+              </br>
+              <!-- Button trigger modal -->
+              <button type="submit" id="showEventDashButton" data-toggle="modal" data-target="#staticBackdropShow">
+                Find It</button>
+            </form>
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdropShow" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                      <div class="container-fluid">
+                        <div class="row">
+                          <!-- Populate with data from showEventSuccess -->
+                          <div class="col-12" id="show-date-info"></div>
+                          <div class="col-12" id="show-days-passed"></div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button type="button" id="showDateButton">Find A Date</button>
+            </br>
+            <form id="edit-event">
+              <input name="event[id]" type="text" placeholder="Date ID">
+              <input name="event[name]" type="text" placeholder="Date Name">
+              <input name="event[date]" type="text" placeholder="Date (Month DD YYYY)">
+              <input name="event[info]" type="text" placeholder="Date Info">
+              </br>
+              <button type="submit">Update Date</button>
+            </form>
+            <button type="button" id="editDateButton">Edit A Date</button>
+          </br>
+            <form id="delete-event">
+              <input name="event[id]" type="text" placeholder="Date ID">
+              </br>
+              <button type="submit">Delete Date</button>
+            </form>
+            <button type="button" id="deleteDateButton">Delete A Date</button>
+            </br>
+            <button type="button" id="sign-out">Sign Out</button>
+            <button type="button" id="menu-button">Return To Menu</button>
+          </div>
+          <!-- Footer -->
+          <footer>
+            <p> Made by Brian Chin. Visit my <a href="https://github.com/bchin224">github here</a></p>
+          </footer>
+    </body>
+</html>
